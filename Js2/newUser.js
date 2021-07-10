@@ -108,6 +108,7 @@ function showUserOnList(){
             <td>${userList[i].phone}</td>
             <td>${userList[i].address}</td>
             <td>${userList[i].description}</td>
+            <td>${userList[i].roles.name}</td>
                         
             <td className="icon-tution3782"><i className="fa fa-pencil-square-o" aria-hidden="true"></i><span><i
                 className="fa fa-trash-o" aria-hidden="true"></i></span>
