@@ -1,9 +1,12 @@
+window.onload = function () {
+    changeViewSubject();
+    showUserOnList();
+}
+
 function changeViewSubject(){
 
     $.ajax({
         type:"GET",
-
-
         url: "http://localhost:8080/api/subject",
         success: function (subjectList){
             console.log("in ra mang mang ", subjectList )
@@ -21,9 +24,7 @@ function changeViewSubject(){
     });
 }
 
-window.onload = function () {
-    changeViewSubject();
-}
+
 
 
 function studentView(){
@@ -73,5 +74,51 @@ function addUser(){
 
         }
     });
+
+}
+
+function getAllUser(){
+
+    $.ajax({
+        type:"GET",
+        url: "http://localhost:8080/api/user/admin/findAll",
+        success: function (userList){
+             console.log(userList);
+
+       }
+    });
+
+
+}
+
+function showUserOnList(){
+    $.ajax({
+        type:"GET",
+        url: "http://localhost:8080/api/user/admin/findAll",
+        success: function (userList){
+            console.log(userList);
+            let c="";
+
+            for (let i = 0; i < userList.length; i++) {
+             c+= "<tr><td>"+ (1+i)+"</td>"+
+
+            `<td>${userList[i].name}</td>
+            <td>${userList[i].username}</td>
+            <td>${userList[i].email}</td>
+            <td>${userList[i].phone}</td>
+            <td>${userList[i].address}</td>
+            <td>${userList[i].description}</td>
+                        
+            <td className="icon-tution3782"><i className="fa fa-pencil-square-o" aria-hidden="true"></i><span><i
+                className="fa fa-trash-o" aria-hidden="true"></i></span>
+            </td>`
+                    + "</tr>"
+            }
+
+            document.getElementById("detailUser").innerHTML= c;
+
+        }
+    });
+
 
 }
