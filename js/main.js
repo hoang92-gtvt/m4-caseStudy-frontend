@@ -16,22 +16,57 @@ $('#bootstrap-touch-slider').bsTouchSlider();
 // js for gallery
 
 $(document).ready(function() {
-$('.thumbnail').click(function(){
-      $('.modal-body').empty();
-  	var title = $(this).parent('a').attr("title");
-  	$('.modal-title').html(title);
-  	$($(this).parents('div').html()).appendTo('.modal-body');
-  	$('#myModal').modal({show:true});
-});
+	$('.thumbnail').click(function(){
+		$('.modal-body').empty();
+		var title = $(this).parent('a').attr("title");
+		$('.modal-title').html(title);
+		$($(this).parents('div').html()).appendTo('.modal-body');
+		$('#myModal').modal({show:true});
+	});
 });
 
 //student dashboard chart .js
 //
-window.onload = function () {
-
-
-
-}
+// window.onload = function () {
+//
+// var chart = new CanvasJS.Chart("chartContainer", {
+// 	animationEnabled: true,
+// 	theme: "light2", // "light1", "light2", "dark1", "dark2"
+// 	title: {
+// 		text: "GDP per Capita - 2016"
+// 	},
+// 	subtitles: [{
+// 		text: "In USD",
+// 		fontSize: 16
+// 	}],
+// 	axisY: {
+// 		prefix: "$",
+// 		scaleBreaks: {
+// 			customBreaks: [{
+// 				startValue: 10000,
+// 				endValue: 35000
+// 			}]
+// 		}
+// 	},
+// 	data: [{
+// 		type: "column",
+// 		yValueFormatString: "$#,##0.00",
+// 		dataPoints: [
+// 			{ label: "USA", y: 57466.787 },
+// 			{ label: "Austraila", y: 49927.82 },
+// 			{ label: "UK", y: 39899.388 },
+// 			{ label: "UAE", y: 37622.207 },
+// 			{ label: "Brazil", y: 8649.948 },
+// 			{ label: "China", y: 8123.181 },
+// 			{ label: "Indonesia", y: 3570.295 },
+// 			{ label: "India", y: 1709.387 }	,
+//             { label: "Bangladesh", y: 1709.387 }
+// 		]
+// 	}]
+// });
+// chart.render();
+//
+// }
 
 
 
