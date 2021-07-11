@@ -1,5 +1,6 @@
 window.onload = function (){
     getCourse();
+    getCourseOnYeuCauGiaSu();
 }
 
 function getCourse() {
@@ -22,6 +23,25 @@ function getCourse() {
         }
     });
 }
+
+
+function  getCourseOnYeuCauGiaSu() {
+    $.ajax({
+        type: "GET",
+        url: "http://localhost:8080/api/course",
+        success: function (data) {
+            let c = `<div id="khoa_hoc">`;
+            c += `<select name="course" id="course-class">`;
+            for (let i = 0; i < data.length; i++) {
+                c += `<option value="">${data[i].description}</option>`;
+            }
+            c += `</select>`;
+            c += `</div>`;
+            document.getElementById("khoa_hoc").innerHTML = c;
+        }
+    });
+}
+
 
 function detailCourse(a){
     let id = localStorage.getIte(id);

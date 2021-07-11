@@ -15,7 +15,7 @@
     <link href="https://fonts.maateen.me/charu-chandan-hard-stroke/font.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="Js2/showcourse.js"></script>
-    <script src="Js2/showsubject.js"></script>
+<!--    <script src="Js2/showsubject.js"></script>-->
 
 </head>
 <body>
@@ -64,25 +64,25 @@
 <form class="new_detail_course">
     <div class="container" style="padding:50px !important; color: darkblue">
         <div class="left-class-create bla-common-shadow" style="margin:unset;">
-            <div class="header-form">
-                <h2 style="margin: 0;font-size: 24px;">Mô tả yêu cầu tìm gia sư</h2>
-            </div>
-            <div class="group-row">
-                <div class="row">
-                    <p class="p-create-class-title">
-                        Tóm tắt yêu cầu tìm gia sư (1 câu, tối đa 100 ký tự) <span class="class-field-alert">*</span>
-                    </p>
-                    <textarea rows="5" cols="80"  class="description"
-                              placeholder="Ví dụ: Tìm gia sư tiếng anh lớp 7 tại Hoàn kiếm, Hà Nội"></textarea>
-                </div>
-            </div>
+<!--            <div class="header-form">-->
+<!--                <h2 style="margin: 0;font-size: 24px;">Mô tả yêu cầu tìm gia sư</h2>-->
+<!--            </div>-->
+<!--            <div class="group-row">-->
+<!--                <div class="row">-->
+<!--                    <p class="p-create-class-title">-->
+<!--                        Tóm tắt yêu cầu tìm gia sư (1 câu, tối đa 100 ký tự) <span class="class-field-alert">*</span>-->
+<!--                    </p>-->
+<!--                    <textarea rows="5" cols="80"  class="description"-->
+<!--                              placeholder="Ví dụ: Tìm gia sư tiếng anh lớp 7 tại Hoàn kiếm, Hà Nội"></textarea>-->
+<!--                </div>-->
+<!--            </div>-->
             <!--Tóm tắt + môn học + chủ đề-->
             <div class="group-row">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="class-field-6 class-field">
-                            <p class="p-create-class-title">Môn học <span class="class-field-alert">*</span></p>
-                            <div id="list_subject">
+                            <p class="p-create-class-title">Khoá Học <span class="class-field-alert">*</span></p>
+                            <div  id="khoa_hoc">
                                 <select name="subject_class" id="subject-class">
                                     <option value="">Lựa chọn khoá học</option>
                                     <option value="72">Toán</option>
@@ -90,34 +90,34 @@
                             </div>
                         </div>
 
-                        <div class="class-field-6 class-field">
-                            <p class="p-create-class-title">Khối học <span class="class-field-alert">*</span></p>
-                            <div id="list_groupname">
-                                <select name="groupname" id="groupname-id">
-                                    <option value="">Lựa chọn khối học</option>
-                                     <option value="72">10</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="class-field-6 class-field">
-                            <div class="class-field-5 class-field class-address">
-                                <p class="p-create-class-title">Địa điểm diễn ra lớp học <span
-                                        class="class-field-alert">*</span></p>
-                                <div id="district_id">
-                                    <select name="district" id="show_district">
-                                        <option selected="" value="">Chọn địa điểm</option>
-                                        <option value="1">Hà Nội</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
+<!--                        <div class="class-field-6 class-field">-->
+<!--                            <p class="p-create-class-title">Khối học <span class="class-field-alert">*</span></p>-->
+<!--                            <div id="list_groupname">-->
+<!--                                <select name="groupname" id="groupname-id">-->
+<!--                                    <option value="">Lựa chọn khối học</option>-->
+<!--                                     <option value="72">10</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="class-field-6 class-field">-->
+<!--                            <div class="class-field-5 class-field class-address">-->
+<!--                                <p class="p-create-class-title">Địa điểm diễn ra lớp học <span-->
+<!--                                        class="class-field-alert">*</span></p>-->
+<!--                                <div id="district_id">-->
+<!--                                    <select name="district" id="show_district">-->
+<!--                                        <option selected="" value="">Chọn địa điểm</option>-->
+<!--                                        <option value="1">Hà Nội</option>-->
+<!--                                    </select>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
                     </div>
                     <!--Chủ đề liên quan-->
-                    <div class="col-md-12">
-                        <div class="group-tag">
+<!--                    <div class="col-md-12">-->
+<!--                        <div class="group-tag">-->
 
-                        </div>
-                    </div>
+<!--                        </div>-->
+<!--                    </div>-->
                 </div>
             </div>
 
@@ -126,9 +126,9 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="class-field-6 class-field">
-                            <p class="p-create-class-title">Học phí dự kiến (vnđ/buổi) <span
-                                    class="class-field-alert">*</span></p>
-                            <input type="text" class="numberOnly" autocomplete="off" maxlength="13"
+<!--                            <p class="p-create-class-title">Học phí dự kiến (vnđ/buổi) <span-->
+<!--                                    class="class-field-alert">*</span></p>-->
+                            <input type="text" hidden class="numberOnly" autocomplete="off" maxlength="13"
                                    placeholder="Ví dụ:250,000" name="price" id="price_cost" value=""
                                    data-original-title="" title="">
                         </div>
