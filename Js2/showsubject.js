@@ -41,23 +41,23 @@ function getDistrict() {
 }
 
 
-function getGroupName() {
-    $.ajax({
-        type: "GET",
-        url: "http://localhost:8080/api/district",
-        success: function (data) {
-            let c = `<div id="district_id">`;
-            c += `<select name="district" id="show_district">`;
-            for (let i = 0; i < data.length; i++) {
-                c += `<option value="${data[i].id}">${data[i].name}</option>`;
-            }
-            c += `</select>`;
-            c += `</div>`;
-            document.getElementById("district_id").innerHTML = c;
-
-        }
-    });
-}
+// function getGroupName() {
+//     $.ajax({
+//         type: "GET",
+//         url: "http://localhost:8080/api/district",
+//         success: function (data) {
+//             let c = `<div id="district_id">`;
+//             c += `<select name="district" id="show_district">`;
+//             for (let i = 0; i < data.length; i++) {
+//                 c += `<option value="${data[i].id}">${data[i].name}</option>`;
+//             }
+//             c += `</select>`;
+//             c += `</div>`;
+//             document.getElementById("district_id").innerHTML = c;
+//
+//         }
+//     });
+// }
 
 
 function createDetailCourse() {
