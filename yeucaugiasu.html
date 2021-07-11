@@ -14,28 +14,23 @@
           rel="stylesheet">
     <link href="https://fonts.maateen.me/charu-chandan-hard-stroke/font.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/showdetaicourse.js"></script>
-    <script src="js/showsubject.js"></script>
+    <script src="Js2/showcourse.js"></script>
+    <script src="Js2/showsubject.js"></script>
 
 </head>
 <body>
 <section class="navbar navbar-fixed-top">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-5">
+            <div class="col-md-3">
                 <div class="logo"><img
                         src="https://www.developmentaid.org/api/frontend/cms/file/2020/04/Top-10-international-organizations-in-education-sector_blog.jpg"
                         alt=""></div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-6">
                 <div class="slogan">
-                    <h4> "Learn from yesterday <br>
+                    <h4> "Learn from yesterday
                         live for today <br>hope for tomorrow"</h4></div>
-            </div>
-            <div class="col-md-5">
-                <div class="header-right"><a href="#" data-toggle="modal" data-target="#login-modal" class="top-login">Login</a>
-                    <button type="button" class="Admission-button">Admission Result</button>
-                </div>
             </div>
         </div>
     </div>
@@ -55,24 +50,10 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav"></ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="yeucautimgiasu.html"> Đăng ký yêu cầu tìm kiếm gia sư</a></li>
-                        <li class="dropdown"><a href="" class="dropdown-toggle" role="button"
+                        <li><a href="index.html"> Trang chủ</a></li>
+                        <li class="dropdown"><a href="listteacher.html" class="dropdown-toggle" role="button"
                                                 aria-haspopup="true" aria-expanded="false">Danh sách Giáo Viên </a>
-                            <!--                            <ul class="dropdown-menu animated zoomIn">-->
-                            <!--                                <li><a href="about-us.html">Danh sách Giáo Viên </a></li>-->
-                            <!--                            </ul>-->
                         </li>
-                        <!--                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"-->
-                        <!--                                                aria-haspopup="true" aria-expanded="false"> Academic<span-->
-                        <!--                                class="caret"></span></a>-->
-                        <!--                            <ul class="dropdown-menu animated zoomIn">-->
-                        <!--                                <li><a href="class-routine.html"> Class Routine </a></li>-->
-                        <!--                                <li><a href="academic-event.html"> Academic Events </a></li>-->
-                        <!--                                <li><a href="academic-calender.html">Academic Calender 2016</a></li>-->
-                        <!--                                <li><a href="Rules-Regulation.html">Rules & Regulations</a></li>-->
-                        <!--                                <li><a href="faculty-info.html"> Faculty Informations </a></li>-->
-                        <!--                            </ul>-->
-                        <!--                        </li>-->
                     </ul>
                 </div>
             </div>
@@ -108,6 +89,16 @@
                                 </select>
                             </div>
                         </div>
+
+                        <div class="class-field-6 class-field">
+                            <p class="p-create-class-title">Khối học <span class="class-field-alert">*</span></p>
+                            <div id="list_groupname">
+                                <select name="groupname" id="groupname-id">
+                                    <option value="">Lựa chọn khối học</option>
+                                    <option value="72">10</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="class-field-6 class-field">
                             <div class="class-field-5 class-field class-address">
                                 <p class="p-create-class-title">Địa điểm diễn ra lớp học <span
@@ -130,7 +121,7 @@
                 </div>
             </div>
 
-            <!--Thông tin học phí, số giờ học, phone, place-->
+            <!--Thông tin học phí-->
             <div class="group-row">
                 <div class="row">
                     <div class="col-md-6">
@@ -141,6 +132,9 @@
                                    placeholder="Ví dụ:250,000" name="price" id="price_cost" value=""
                                    data-original-title="" title="">
                         </div>
+
+
+<!--                        Số giờ học một ngày-->
                         <div class="class-field-6 class-field">
                             <div class="class-field-5 class-field">
                                 <p class="p-create-class-title">Số giờ học một ngày <span
@@ -150,6 +144,9 @@
                                 <!--                                           onkeyup="this.value=this.value.replace(/[^0-9]/g,'');" value="0973951571">-->
                             </div>
                         </div>
+
+
+<!--                        Ngày bắt đầu học-->
                         <div class="class-field-6 class-field">
                             <div class="class-field-5 class-field">
                                 <p class="p-create-class-title">Ngày bắt đầu <span class="class-field-alert">*</span>
@@ -158,14 +155,18 @@
                                 <!--                                           onkeyup="this.value=this.value.replace(/[^0-9]/g,'');" value="0973951571">-->
                             </div>
                         </div>
+
+
+<!--                        Ngày kết thúc-->
                         <div class="class-field-6 class-field">
                             <div class="class-field-5 class-field">
                                 <p class="p-create-class-title">Ngày kết thúc <span class="class-field-alert">*</span>
                                 </p>
                                 <input type="text" name="endTime" id="timeennd" placeholder=" ví dụ: 20/07/2021">
-                                <!--                                           onkeyup="this.value=this.value.replace(/[^0-9]/g,'');" value="0973951571">-->
                             </div>
                         </div>
+
+<!--                        Số điện thoại liên hệ -->
                         <div class="class-field-6 class-field">
                             <div class="class-field-5 class-field">
                                 <p class="p-create-class-title">Điện thoại liên hệ <span
@@ -174,18 +175,7 @@
                                 <input type="text" name="phone" id="phone_class" placeholder="Ví dụ: 091234567">
                             </div>
                         </div>
-                        <!--                        <div class="class-field-6 class-field">-->
-                        <!--                            <div class="class-field-5 class-field class-address">-->
-                        <!--                                <p class="p-create-class-title">Địa điểm diễn ra lớp học <span-->
-                        <!--                                        class="class-field-alert">*</span></p>-->
-                        <!--                                <div id="district_id">-->
-                        <!--                                    <select name="district" id="show_district">-->
-                        <!--                                        <option selected="" value="">Chọn địa điểm</option>-->
-                        <!--                                        <option value="1">Hà Nội</option>-->
-                        <!--                                    </select>-->
-                        <!--                                </div>-->
-                        <!--                            </div>-->
-                        <!--                        </div>-->
+
                     </div>
                 </div>
                 <div class="row" style="text-align:center;padding:10px 10px;">
@@ -194,8 +184,8 @@
                 </div>
             </div>
         </div>
-
     </div>
     </div>
+</form>
 </body>
 </html>
