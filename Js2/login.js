@@ -13,15 +13,16 @@ function login1(){
         processData: false,
         success: function (user) {
             console.log(user)
-            if (user instanceof String){
+            if (user =="Login fail"){
                 alert(user)
             }else {
                 alert("Đăng nhập thành công");
                 localStorage.setItem("id", user.id);
                 localStorage.setItem("name", user.name);
                 localStorage.setItem("role", user.role);
+                window.open("index.html");
             }
-            window.open("index.html");
+
         }
     });
 }
