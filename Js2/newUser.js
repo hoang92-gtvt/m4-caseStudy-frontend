@@ -2,6 +2,7 @@ window.onload = function () {
     changeViewSubject();
     showUserOnList();
     getCourse();
+    showInfomation();
 }
 
 function changeViewSubject(){
