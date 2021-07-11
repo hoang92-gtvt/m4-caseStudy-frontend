@@ -1,6 +1,8 @@
 window.onload = function () {
     getSubject();
     getDistrict();
+    showAllCourse()
+    showAllCourses()
 }
 
 function getSubject() {
@@ -11,16 +13,16 @@ function getSubject() {
             let c = `<div id="list_subject">`;
             c += `<select name="subject" id="subject-class">`;
             for (let i = 0; i < data.length; i++) {
-                c +=`<option value="${data[i].id}">${data[i].name}</option>`;
+                c += `<option value="${data[i].id}">${data[i].name}</option>`;
             }
-            c+=`</select>`;
+            c += `</select>`;
             c += `</div>`;
             document.getElementById("list_subject").innerHTML = c;
         }
     });
 }
 
-function getDistrict(){
+function getDistrict() {
     $.ajax({
         type: "GET",
         url: "http://localhost:8080/api/district",
@@ -28,9 +30,9 @@ function getDistrict(){
             let c = `<div id="district_id">`;
             c += `<select name="district" id="show_district">`;
             for (let i = 0; i < data.length; i++) {
-                c +=`<option value="${data[i].id}">${data[i].name}</option>`;
+                c += `<option value="${data[i].id}">${data[i].name}</option>`;
             }
-            c+=`</select>`;
+            c += `</select>`;
             c += `</div>`;
             document.getElementById("district_id").innerHTML = c;
 
@@ -38,31 +40,30 @@ function getDistrict(){
     });
 }
 
-//
-// function getGroupName(){
-//     $.ajax({
-//         type: "GET",
-//         url: "http://localhost:8080/api/district",
-//         success: function (data) {
-//             let c = `<div id="district_id">`;
-//             c += `<select name="district" id="show_district">`;
-//             for (let i = 0; i < data.length; i++) {
-//                 c +=`<option value="${data[i].id}">${data[i].name}</option>`;
-//             }
-//             c+=`</select>`;
-//             c += `</div>`;
-//             document.getElementById("district_id").innerHTML = c;
-//
-//         }
-//     });
-// }
+
+function getGroupName() {
+    $.ajax({
+        type: "GET",
+        url: "http://localhost:8080/api/district",
+        success: function (data) {
+            let c = `<div id="district_id">`;
+            c += `<select name="district" id="show_district">`;
+            for (let i = 0; i < data.length; i++) {
+                c += `<option value="${data[i].id}">${data[i].name}</option>`;
+            }
+            c += `</select>`;
+            c += `</div>`;
+            document.getElementById("district_id").innerHTML = c;
+
+        }
+    });
+}
 
 
+function createDetailCourse() {
+    let nameSubject = $('#user_name').val();
 
-function createDetailCourse(){
-    let nameSubject= $('#user_name').val();
-
-    let form=$('#new_detail_course')[0];
+    let form = $('#new_detail_course')[0];
     let data = new FormData(form);
     $.ajax({
         url: "http://localhost:8080/api/user/create",
@@ -78,6 +79,39 @@ function createDetailCourse(){
 
         }
     });
+
+}
+
+
+function showAllCourse() {
+    $.ajax({
+        type: "GET",
+        url: "http://localhost:8080/api/course",
+        success: function (data) {
+            console.log(data);
+            let c = "";
+
+            for (let i = 0; i < data.length; i++) {
+                c += `<tr><td>` + (1 + i) + `</td>` +
+           `<td>${data[i].keyname}</td>
+            <td>${data[i].subjects.name}</td>
+            <td>${data[i].groupname}</td>
+            <td>${data[i].district.name}</td>
+            <td>${data[i].periodoftime}</td>
+            <td>${data[i].description}</td>
+            <td><a href=''>Tham Gia khoá Học</a></td>
+                        
+            <td className="icon-tution3782"><i className="fa fa-pencil-square-o" aria-hidden="true"></i><span><i
+                className="fa fa-trash-o" aria-hidden="true"></i></span>
+            </td>`
+                    + "</tr>"
+            }
+
+            document.getElementById("list-course").innerHTML = c;
+
+        }
+    });
+
 
 }
 
