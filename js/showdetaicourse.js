@@ -9,8 +9,7 @@ function getCourse() {
         success: function (data) {
             let c = `<div id="list_course">`;
             for (let i = 0; i < data.length; i++) {
-
-                c += `<span class="d-left">Aug<br>26</span>
+                c += `<span class="d-left">District<br>${data.course.district.name}</span>
                       <a href="#">${data[i].description}</a>`;
             }
             c += `</div>`;
