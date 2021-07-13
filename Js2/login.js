@@ -33,10 +33,14 @@ function login1(){
                 switch (role){
                     case "STUDENT":
                         window.location= "trangcanhan.html";
+                        break;
                     case "TEACHER":
-                        window.location= "trangcanhan.html";
+                        window.location= "teacherpage.html";
+                        break;
                     case "ADMIN":
-                        window.location= "trangcanhan.html";
+                        window.location= "admin.html";
+                        break;
+
                 }
 
             }
@@ -68,7 +72,9 @@ function showInfomation(){
     c+= `<img className="media-object img-thumbnail user-img" style="height: 80px;" alt="User Picture"
              src="./image/${image}" >
         <br>
-        <span> ${name}</span>`
+        <span> ${name}</span>
+        <br>
+        <a href="editTeach.html">Edit User</a>`
 
     document.getElementById("imageOfUser").innerHTML = c;
 }

@@ -30,28 +30,20 @@ function showImageIndex() {
         url: "http://localhost:8080/api/user/findByRole/2",
         success: function (data) {
             console.log(data);
-            let c = `<section id="test" class="details-corner">`;
+            let c = "";
             for (let i = 0; i < data.length; i++) {
-                c += `
-                               
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="chairman-message">
-                        <h4>${data[i].name}</h4> <img src="./image/${data[i].avatar}" alt="image">
-                        <p>${data[i].description} </p>
-                        <a href="yeucaugiasu.html">
-                            <button class="see-more" type="button" value="${data[i].id}" onclick="getIdTeacher(this)">Mời Dạy</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `  ;
-                localStorage.setItem("id_teacher",data[i].id);
-            }
-            c += `</section>`;
+                c +=
+                        `<div class="col-md-4" style="float: left">
+                            <div class="chairman-message" >
+                                <h4>${data[i].name}</h4> <img src="./image/${data[i].avatar}" alt="image">
+                                <p>${data[i].description} </p>
+                                <a href="yeucaugiasu.html">
+                                    <button class="see-more" type="button" value="${data[i].id}" onclick="getIdTeacher(this)">Mời Dạy</button>
+                                </a>
+                            </div>
+                        </div>`
 
+            }
             document.getElementById("test").innerHTML = c;
         }
     });
