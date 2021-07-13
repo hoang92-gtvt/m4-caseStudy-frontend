@@ -10,7 +10,8 @@ function showAlDetailCourse() {
         url: `http://localhost:8080/api/detail/find/teacher/WAIT/${name}`,
         success: function (data) {
             console.log(data);
-            let c = ` <thead>
+            let c = `
+ <thead>
                     </thead>`;
 
             for (let i = 0; i < data.length; i++) {
