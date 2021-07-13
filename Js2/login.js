@@ -53,7 +53,7 @@ function showInfomation(){
     let image = localStorage.getItem("image");
     let c="";
     c+= `<img className="media-object img-thumbnail user-img" style="height: 80px;" alt="User Picture"
-             src="/image/" + image>`
+             src="./image/${image}" >`
 
     document.getElementById("imageOfUser").innerHTML = c;
 }

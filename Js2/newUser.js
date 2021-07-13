@@ -127,35 +127,4 @@ function showUserOnList(){
 }
 
 
-function editTeacher(){
-    let id ="1";
 
-    $.ajax({
-        type:"PUT",
-        url: "http://localhost:8080/api/user/admin/findOne/"+ id,
-        success: function (user){
-            console.log(user);
-            let c="";
-
-            for (let i = 0; i < userList.length; i++) {
-                c+= "<tr><td>"+ (1+i)+"</td>"+
-
-                    `<td>${userList[i].name}</td>
-          
-            <td>${user[i].email}</td>
-            <td>${user[i].phone}</td>
-            <td>${user[i].address}</td>
-            <td>${user[i].description}</td>
-            <td>${user[i].roles.name}</td>
-                        
-            <td className="icon-tution3782"><i className="fa fa-pencil-square-o" aria-hidden="true"></i><span><i
-                className="fa fa-trash-o" aria-hidden="true"></i></span>
-            </td>`
-                    + "</tr>"
-            }
-
-            document.getElementById("detailUser").innerHTML= c;
-
-        }
-    });
-}

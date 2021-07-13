@@ -15,7 +15,6 @@
     <link href="https://fonts.maateen.me/charu-chandan-hard-stroke/font.css" rel="stylesheet">
 
 
-
 </head>
 
 <body>
@@ -63,10 +62,10 @@
 </div>
 <section class="stu-per-fees-info8239">
     <div class="container">
-        <form action="#" id="editUserForm">
+        <form action="#" id="editStudentForm">
 
 
-            <div class="stu-personal-info9120" hidden>
+            <div class="stu-personal-info9120">
                 <h4>Type Account:</h4>
 
 
@@ -75,11 +74,11 @@
                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 
-<!--                    <input type="radio" class="role_user" name="roles" value="3"-->
-<!--                           onclick="studentView()"><span>Student</span>-->
+                    <input type="radio" class="role_user" name="roles" value="3"
+                    onclick="studentView()"><span>Student</span>
                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <input type="radio" class="role_user" name="roles" value="2"
-                           onclick="teacherView()"><span>Teacher</span>
+<!--                    <input type="radio" class="role_user" name="roles" value="2"-->
+<!--                           onclick="teacherView()"><span>Teacher</span>-->
                 </div>
 
             </div>
@@ -107,7 +106,7 @@
                         class="glyphicon glyphicon-ok form-control-feedback form-control-feedback28"
                         aria-hidden="true"></span> <span id="inputSuccess2Status3" class="sr-only">(success)</span>
                 </div>
-                <div class="form-group has-success has-success2892 has-feedback has-success212" >
+                <div class="form-group has-success has-success2892 has-feedback has-success212" hidden>
                     <label class="col-sm-2 control-label control-label9320" for="user_password">Password*</label>
                     <input type="text" class="form-control form-control829" name="password" id="user_password"
                            aria-describedby="inputSuccess2Status"> <span
@@ -146,7 +145,7 @@
                 </div>
 
             </div>
-            <div class="optional-info9120" id="foldOptional">
+            <div class="optional-info9120" id="foldOptional" hidden>
                 <h4>Optional Info:</h4>
 
                 <div class="form-group has-success has-success2892 has-feedback has-success212">
@@ -188,7 +187,6 @@
 <script src="js/main.js"></script>
 
 <script src="Js2/newUser.js"></script>
-<script src="Js2/editTeacher.js"></script>
 <script src="Js2/editStudent.js"></script>
 </body>
 
