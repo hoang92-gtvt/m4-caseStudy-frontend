@@ -13,9 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese"
           rel="stylesheet">
     <link href="https://fonts.maateen.me/charu-chandan-hard-stroke/font.css" rel="stylesheet">
-
-
-
+    <script src="Js2/showsubject.js"></script>
 
 
 </head>
@@ -53,7 +51,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav"></ul>
                     <ul class="nav navbar-nav navbar-left">
-                        <li><a href="admin.html"> Trang Chủ</a></li>
+                        <li><a href="admin.html"> Trang cua bạn</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -68,77 +66,54 @@
 
     <div class="container">
         <div class="class-header94 text-center">
-            <h2>Danh Sách User</h2>
+            <h2>Danh Sách Khoá Học</h2>
             <hr>
         </div>
-        <form>
-
-<!--            <a href="updateuser.html">-->
-<!--                <button type="button" class="add-member-button29">+ ADD</button>-->
-<!--            </a>-->
-
-            <input type="search" placeholder="Search" class="mem-search854">
 
 
-        </form>
+        <section class="tution-fee--six1819">
+            <div class="container">
+                <table class="table table-hover" id="list_course">
+                    <thead>
+                    <tr>
+                        <th>Serial<br>No</th>
+                        <th>Key Name</th>
+                        <th>Subject</th>
+                        <th>GroupName</th>
+                        <th>District</th>
+                        <th>PeriodOfTime</th>
+                        <th>Description</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+
+                    <tbody id="list-course">
+
+                    <tr>
+                        <td>1</td>
+                        <td>Radwan Ahmed</td>
+                        <td>1</td>
+                        <td>radwan1@mail.com</td>
+                        <td>24/10/17</td>
+                        <td>1500</td>
+                        <td>1500</td>
+                        <td>Tham gia Khoá Học</td>
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+        </section>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+        <!--<script src="Js2/newUser.js"></script>-->
     </div>
 </div>
-
-
-<section class="tution-fee--six1819">
-    <div class="container">
-        <table class="table table-hover">
-            <thead>
-            <tr>
-                <th>Serial<br>No</th>
-                <th>Name</th>
-
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Address</th>
-                <th>Description</th>
-                <th>Role</th>
-                <th>Action</th>
-            </tr>
-            </thead>
-            <tbody id="detailUser">
-            <tr >
-                <td>1</td>
-                <td>Radwan Ahmed</td>
-
-                <td>radwan1@mail.com</td>
-                <td>24/10/17</td>
-                <td>1500</td>
-                <td>1500</td>
-                <td>1500</td>
-                <td class="icon-tution3782"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><span><i
-                        class="fa fa-trash-o" aria-hidden="true"></i></span></td>
-            </tr>
-
-
-            </tbody>
-        </table>
-
-    </div>
-
-
-</section>
-<!--        /* modal login*/-->
-
-
-
-<div class="container">
-    <section class="foore-part text-center">
-        <p><a href="#">@CopyRight by L.N.H.H.S</a></p>
-    </section>
-</div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/jquery-3.1.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/main.js"></script>
-
-<script src="Js2/newUser.js"></script>
 </body>
 
 </html>

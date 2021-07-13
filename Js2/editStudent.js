@@ -1,19 +1,23 @@
 window.onload = function () {
     checkRole();
     changeViewSubject();
+    showButtonHome();
 }
 
 function checkRole(){
     let role = localStorage.getItem("role");
     if(role =="STUDENT"){
         editStudent();
-    }else {
+
+    }else if(role =="TEACHER"){
         editTeacher()};
+
 }
 
 function editStudent() {
     let id = localStorage.getItem("id");
     console.log(id)
+
     $.ajax({
         type: "GET",
         url: "http://localhost:8080/api/user/admin/findOne/" + id,
@@ -148,6 +152,7 @@ function editStudent() {
 
 
             document.getElementById("editUserForm").innerHTML = c;
+
         }
 
     });

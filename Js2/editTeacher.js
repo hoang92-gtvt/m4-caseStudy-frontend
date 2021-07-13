@@ -139,5 +139,22 @@ function editTeacher() {
         }
 
     });
+showButtonHome();
+changeViewSubject();
 
+}
+
+function showButtonHome(){
+    let role = localStorage.getItem("role");
+    switch (role){
+        case "STUDENT":
+            document.getElementById("home_button").innerHTML = "<li><a href=\"trangcanhan.html\"> Home</a></li>";
+            break;
+        case "TEACHER":
+            document.getElementById("home_button").innerHTML = "<li><a href=\"teacherpage.html\"> Home</a></li>";
+            break;
+        case "ADMIN":
+            document.getElementById("home_button").innerHTML = "<li><a href=\"admin.html\"> Home</a></li>";
+            break;
+    }
 }
