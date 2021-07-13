@@ -29,8 +29,8 @@ function editStudent() {
                             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 
-                            <input type="radio" class="role_user" name="roles" value="3"
-                            onclick="studentView()"><span>Student</span>
+                            <input type="text" class="role_user" name="roles" value="3">
+                             <span>Student</span>
                             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 <!--                            <input type="radio" className="role_user" name="roles" value="2"-->
 <!--                                   onClick="teacherView()"><span>Teacher</span>-->

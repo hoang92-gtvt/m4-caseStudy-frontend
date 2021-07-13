@@ -20,7 +20,7 @@ function editTeacher() {
                             <!--                    <input type="radio" class="role_user" name="roles" value="3"-->
                             <!--                           onclick="studentView()"><span>Student</span>-->
                             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                            <input type="radio" className="role_user" name="roles" value="2"
+                            <input type="text" className="role_user" name="roles" value="2"
                                    onClick="teacherView()"><span>Teacher</span>
                         </div>
 

@@ -7,6 +7,7 @@ function login1(){
     let form=$('#formLogin')[0];
     let data = new FormData(form);
     console.log("da vao function")
+    console.log(data)
     $.ajax({
         url: "http://localhost:8080/api/auth/login",
         type: 'POST',
@@ -26,7 +27,18 @@ function login1(){
                 localStorage.setItem("name", user.name);
                 localStorage.setItem("role", user.role);
                 localStorage.setItem("image", user.image);
-                window.open("index.html");
+                // window.open("trangcanhan.html");
+
+                let role = localStorage.getItem("role")
+                switch (role){
+                    case "STUDENT":
+                        window.location= "trangcanhan.html";
+                    case "TEACHER":
+                        window.location= "trangcanhan.html";
+                    case "ADMIN":
+                        window.location= "trangcanhan.html";
+                }
+
             }
 
         }
@@ -39,7 +51,7 @@ function logout2(){
     localStorage.setItem("name", null);
     localStorage.setItem("role", null);
     localStorage.setItem("image", null);
-    window.open("index.html");
+    window.location= ("index.html");
 }
 
 function checkLogin(){
@@ -51,9 +63,12 @@ function checkLogin(){
 
 function showInfomation(){
     let image = localStorage.getItem("image");
+    let name = localStorage.getItem("name");
     let c="";
     c+= `<img className="media-object img-thumbnail user-img" style="height: 80px;" alt="User Picture"
-             src="./image/${image}" >`
+             src="./image/${image}" >
+        <br>
+        <span> ${name}</span>`
 
     document.getElementById("imageOfUser").innerHTML = c;
 }
