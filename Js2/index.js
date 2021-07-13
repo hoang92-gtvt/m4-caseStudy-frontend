@@ -1,5 +1,6 @@
-window.onload = function (){
+window.onload = function () {
     showImageIndex();
+    // getIdTeacher()
 }
 // function showImageIndex(){
 //     $.ajax({
@@ -23,16 +24,16 @@ window.onload = function (){
 //
 // }
 
-function showImageIndex(){
+function showImageIndex() {
     $.ajax({
         type: "GET",
         url: "http://localhost:8080/api/user/findByRole/2",
         success: function (data) {
             console.log(data);
-            let c = `<div id="image_index">`;
+            let c = `<section id="test" class="details-corner">`;
             for (let i = 0; i < data.length; i++) {
-                c +=`  
-                               <section class="details-corner">
+                c += `
+                               
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -40,18 +41,43 @@ function showImageIndex(){
                         <h4>${data[i].name}</h4> <img src="./image/${data[i].avatar}" alt="image">
                         <p>${data[i].description} </p>
                         <a href="yeucaugiasu.html">
-                            <button class="see-more" type="button" value="${data[i].id}">Mời Dạy</button>
+                            <button class="see-more" type="button" value="${data[i].id}" onclick="getIdTeacher(this)">Mời Dạy</button>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>`;
+    `  ;
+                localStorage.setItem("id_teacher",data[i].id);
             }
-            c+=`</div>`
-            document.getElementById("image_index").innerHTML = c;
+            c += `</section>`;
+
+            document.getElementById("test").innerHTML = c;
         }
     });
 
 }
+// function getIdTeacher(b){
+//     let id_teacher = b.getAttribute('value');
+//     let id = localStorage.getItem("id");
+//     let c="";
+//     c+= `
+//         <input type="text" className="numberOnly" autoComplete="off" maxLength="13"
+//                 name="userTeacher" value="${id_teacher}"
+//                data-original-title="" title="">`
+//     document.getElementById("teacher_yeucau").innerHTML =c;
+//
+//     let c1="";
+//     c1+= `
+//                             <!--                            <p class="p-create-class-title">Học phí dự kiến (vnđ/buổi) <span-->
+//                             <!--                                    class="class-field-alert">*</span></p>-->
+//                             <input type="text" class="num" autocomplete="off" maxlength="13"
+//                                    placeholder="Ví dụ:250,000" name="p"  value="${id}"
+//                                    data-original-title="" title="">`
+//     document.getElementById("student_yeucau").innerHTML =c1;
+//
+//
+// }
+
+
 

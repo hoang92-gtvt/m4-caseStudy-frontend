@@ -2,7 +2,7 @@ window.onload = function () {
     getSubject();
     getDistrict();
     showAllCourse()
-    showAllCourses()
+    // showAllCourses()
 }
 
 function getSubject() {
@@ -89,15 +89,16 @@ function showAllCourse() {
         url: "http://localhost:8080/api/course",
         success: function (data) {
             console.log(data);
-            let c = "";
+            let c = ` <thead>
+                    </thead>`;
 
             for (let i = 0; i < data.length; i++) {
                 c += `<tr><td>` + (1 + i) + `</td>` +
-           `<td>${data[i].keyname}</td>
-            <td>${data[i].subjects.name}</td>
-            <td>${data[i].groupname}</td>
+           `<td>${data[i].keyName}</td>
+            <td>${data[i].subject.name}</td>
+            <td>${data[i].groupName}</td>
             <td>${data[i].district.name}</td>
-            <td>${data[i].periodoftime}</td>
+            <td>${data[i].periodOfTime}</td>
             <td>${data[i].description}</td>
             <td><a href=''>Tham Gia khoá Học</a></td>
                         

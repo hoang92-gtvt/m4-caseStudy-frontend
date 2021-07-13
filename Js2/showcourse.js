@@ -1,6 +1,7 @@
 window.onload = function (){
     getCourse();
     getCourseOnYeuCauGiaSu();
+    setIdforDetail()
 }
 
 function getCourse() {
@@ -43,9 +44,23 @@ function  getCourseOnYeuCauGiaSu() {
 }
 
 
-function detailCourse(a){
-    let id = localStorage.getIte(id);
+function setIdforDetail(){
+    let id = localStorage.getItem("id");
+    let id_teacher= localStorage.getItem("id_teacher");
+    let c="";
+    c+= `
+        <input type="text" className="numberOnly" autoComplete="off" maxLength="13"
+                name="userTeacher" value="${id_teacher}"
+               data-original-title="" title="">`
+        document.getElementById("teacher_yeucau").innerHTML =c;
 
-
+    let c1="";
+    c1+= `
+                            <!--                            <p class="p-create-class-title">Học phí dự kiến (vnđ/buổi) <span-->
+                            <!--                                    class="class-field-alert">*</span></p>-->
+                            <input type="text" class="num" autocomplete="off" maxlength="13"
+                                   placeholder="Ví dụ:250,000" name="p"  value="${id}"
+                                   data-original-title="" title="">`
+    document.getElementById("student_yeucau").innerHTML =c1;
 
 }
